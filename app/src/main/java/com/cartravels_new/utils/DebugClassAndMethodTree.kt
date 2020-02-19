@@ -1,4 +1,4 @@
-package com.cartravels.utils
+package com.cartravels_new.utils
 
 import android.text.TextUtils
 import org.jetbrains.annotations.NotNull
@@ -8,7 +8,8 @@ import timber.log.Timber.DebugTree
  * @author Steven Byle
  */
 class DebugClassAndMethodTree : DebugTree() {
-    override fun log(priority: Int, tag: String?, msg: @NotNull String, t: Throwable?) { // Get the message prefix and prepend it into the message
+    override fun log(priority: Int, tag: String?, msg: @NotNull String, t: Throwable?) {
+        // Get the message prefix and prepend it into the message
         var message: String = msg
         val messagePrefix = messagePrefix
         if (!TextUtils.isEmpty(messagePrefix)) {
@@ -22,11 +23,8 @@ class DebugClassAndMethodTree : DebugTree() {
         super.log(priority, tag, message, t)
     }
 
-    // DO NOT switch this to Thread.getCurrentThread().getStackTrace(). The test will pass
-// because Robolectric runs them on the JVM but on Android the elements are different.
     private val messagePrefix: String
-        get() { // DO NOT switch this to Thread.getCurrentThread().getStackTrace(). The test will pass
-// because Robolectric runs them on the JVM but on Android the elements are different.
+        get() {
             val stackTrace = Throwable().stackTrace
             check(stackTrace.size > CALL_STACK_INDEX) { "Synthetic stacktrace didn't have enough elements: are you using proguard?" }
             return stackTrace[CALL_STACK_INDEX].methodName

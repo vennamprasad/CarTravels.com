@@ -1,4 +1,4 @@
-package com.cartravels.screens.fragments
+package com.cartravels_new.screens.fragments
 
 import android.app.Activity
 import android.app.Dialog
@@ -11,10 +11,10 @@ import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import com.cartravels.R
-import com.cartravels.models.MaterialTheme
-import com.cartravels.utils.LogUtils
-import com.cartravels.utils.LogUtils.getSavedInstanceStateNullMessage
+import com.cartravels_new.R
+import com.cartravels_new.models.MaterialTheme
+import com.cartravels_new.utils.LogUtils
+import com.cartravels_new.utils.LogUtils.getSavedInstanceStateNullMessage
 import timber.log.Timber
 
 /**

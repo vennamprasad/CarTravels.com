@@ -1,7 +1,9 @@
 <!-- @formatter:off -->
 <resources>
     <!-- App -->
-    <string name="app_name">Material Themes Made Easy</string>
+    <string name="app_name">CarTravels.com</string>
+    <string name="facebook_app_id">239830083699823</string>
+    <string name="fb_login_protocol_scheme">fb239830083699823</string>
 
     <!-- Home -->
     <string name="home_tab_xml">XML</string>
@@ -64,5 +66,12 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="logo">logo</string>
+    <string name="need_help_text">Need help? Visit the <annotation type="help_link">Help Center.</annotation></string>
+    <string name="be_a_part_of_the_largest_indian_travel_community">Be a part of the largest Indian Travel Community</string>
+    <string name="email">Email</string><string name="mobile">Mobile</string>
+    <string name="login_sign_up_using">Login/Sign up Using</string>
+    <string name="next">Next</string>
+    <string name="footer"><![CDATA[by continuing , i agree to Cartravels.com T&C]]></string><string name="google">Google</string>
 
 </resources>

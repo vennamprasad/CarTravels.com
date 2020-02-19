@@ -1,4 +1,4 @@
-package com.cartravels.utils
+package com.cartravels_new.utils
 
 import android.os.Bundle
 import timber.log.Timber

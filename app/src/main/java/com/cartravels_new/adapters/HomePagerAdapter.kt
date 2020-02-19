@@ -1,12 +1,12 @@
-package com.cartravels.adapters
+package com.cartravels_new.adapters
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.cartravels.R
-import com.cartravels.screens.fragments.MaterialThemeInCodeFragment
-import com.cartravels.screens.fragments.MaterialThemeInXmlFragment
+import com.cartravels_new.R
+import com.cartravels_new.screens.fragments.MaterialThemeInCodeFragment
+import com.cartravels_new.screens.fragments.MaterialThemeInXmlFragment
 import java.lang.ref.WeakReference
 
 /**

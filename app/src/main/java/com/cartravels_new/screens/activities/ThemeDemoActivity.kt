@@ -1,4 +1,4 @@
-package com.cartravels.screens.activities
+package com.cartravels_new.screens.activities
 
 import android.content.Context
 import android.content.Intent
@@ -8,13 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.DialogFragment
 import androidx.viewpager.widget.ViewPager
-import com.cartravels.R
-import com.cartravels.adapters.HomePagerAdapter
-import com.cartravels.models.MaterialTheme
-import com.cartravels.screens.fragments.SetThemeDialogFragment.Companion.newInstance
-import com.cartravels.utils.DialogUtils.showDialogFragment
-import com.cartravels.utils.LogUtils
-import com.cartravels.utils.LogUtils.getSavedInstanceStateNullMessage
+import com.cartravels_new.R
+import com.cartravels_new.adapters.HomePagerAdapter
+import com.cartravels_new.models.MaterialTheme
+import com.cartravels_new.screens.fragments.SetThemeDialogFragment.Companion.newInstance
+import com.cartravels_new.utils.DialogUtils.showDialogFragment
+import com.cartravels_new.utils.LogUtils
+import com.cartravels_new.utils.LogUtils.getSavedInstanceStateNullMessage
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayout
 import timber.log.Timber
@@ -49,10 +49,6 @@ class ThemeDemoActivity : AppCompatActivity(), View.OnClickListener {
         val toolbar = findViewById<View>(R.id.activity_home_toolbar) as Toolbar
         val viewPager = findViewById<View>(R.id.activity_home_pager) as ViewPager
         val tabLayout = findViewById<View>(R.id.activity_home_tab_layout) as TabLayout
-        // If this is the first creation, default state variables
-        if (savedInstanceState == null) {
-        } else {
-        }
         // Set and bind data to views
         setSupportActionBar(toolbar)
         val viewPagerAdapter = HomePagerAdapter(this, supportFragmentManager)

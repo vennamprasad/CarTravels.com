@@ -5,15 +5,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     tools:context=".screens.activities.SplashActivity">
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
+
     <ImageView
         android:id="@+id/fullscreen_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/logo"
+        android:src="@drawable/ic_logo"
         tools:ignore="ContentDescription" />
 
     <ProgressBar
@@ -24,6 +22,5 @@
         android:layout_marginTop="-8dp"
         android:indeterminate="true"
         android:padding="1dp" />
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
+
 </RelativeLayout>

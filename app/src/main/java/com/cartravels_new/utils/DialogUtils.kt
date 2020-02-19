@@ -1,4 +1,4 @@
-package com.cartravels.utils
+package com.cartravels_new.utils
 
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment

@@ -1,4 +1,4 @@
-package com.cartravels.screens.fragments
+package com.cartravels_new.screens.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
-import com.cartravels.R
-import com.cartravels.utils.LogUtils
-import com.cartravels.utils.LogUtils.getSavedInstanceStateNullMessage
+import com.cartravels_new.R
+import com.cartravels_new.utils.LogUtils
+import com.cartravels_new.utils.LogUtils.getSavedInstanceStateNullMessage
 import timber.log.Timber
 
 /**

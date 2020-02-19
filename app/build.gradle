@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.cartravels"
+        applicationId "com.cartravels_new"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
@@ -23,6 +24,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //Firebase
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-core:17.2.2'
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
     testImplementation 'junit:junit:4.13'
 
     // Google Support Libraries
@@ -34,6 +41,11 @@ dependencies {
     //kotlin
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //fb
+    implementation 'com.facebook.android:facebook-android-sdk:4.31.0'
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
 }
 repositories {
     mavenCentral()

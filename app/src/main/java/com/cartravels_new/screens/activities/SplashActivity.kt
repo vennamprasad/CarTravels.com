@@ -1,10 +1,10 @@
-package com.cartravels.screens.activities
+package com.cartravels_new.screens.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import com.cartravels.R
+import com.cartravels_new.R
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -16,8 +16,9 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         Handler().postDelayed({
-            startActivity(Intent(this, ThemeDemoActivity::class.java))
-        }, 220)
+            startActivity(Intent(this, OtpActivity::class.java))
+            finish()
+        }, 300)
     }
 
 }

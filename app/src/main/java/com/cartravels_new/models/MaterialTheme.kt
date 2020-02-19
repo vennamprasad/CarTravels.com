@@ -1,8 +1,8 @@
-package com.cartravels.models
+package com.cartravels_new.models
 
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
-import com.cartravels.R
+import com.cartravels_new.R
 import java.io.Serializable
 
 /**
