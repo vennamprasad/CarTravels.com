@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".screens.activities.RegistrationTypeActivity">
 
     <ImageView
@@ -25,16 +26,16 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/normal"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_margin="4dp"
-            app:cardBackgroundColor="#EF5350"
+            android:layout_height="125dp"
+            app:cardBackgroundColor="@color/material_red_500"
             app:cardCornerRadius="8dp"
             app:cardElevation="3dp"
             app:cardUseCompatPadding="true">
@@ -47,29 +48,27 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_shadow_soft"
-                    android:padding="10dp" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/single" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:padding="10dp"
-                    android:text="Normal User"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:text="@string/normal_user"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                     android:textColor="@android:color/white"
                     android:textStyle="bold" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/crd_business"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/business"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_margin="4dp"
-            app:cardBackgroundColor="#505063"
+            android:layout_height="125dp"
+            app:cardBackgroundColor="@color/green_500"
             app:cardCornerRadius="8dp"
             app:cardElevation="3dp"
             app:cardUseCompatPadding="true">
@@ -82,15 +81,15 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_shadow_soft"
-                    android:padding="10dp" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:padding="10dp"
+                    android:src="@drawable/group" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:clipToPadding="false"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -98,8 +97,8 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="Business Users"
+                        android:paddingStart="10dp"
+                        android:text="@string/business_users"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                         android:textColor="@android:color/white"
                         android:textStyle="bold" />
@@ -107,8 +106,8 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="- Drivers"
+                        android:paddingStart="10dp"
+                        android:text="@string/drivers"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                         android:textColor="@android:color/white"
                         android:textStyle="bold" />
@@ -116,13 +115,27 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="- Travel Agenecy"
+                        android:paddingStart="10dp"
+                        android:text="@string/travel_agenecy"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                         android:textColor="@android:color/white"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bottom_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

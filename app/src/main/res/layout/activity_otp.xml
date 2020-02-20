@@ -111,31 +111,21 @@
             app:layout_constraintTop_toBottomOf="@id/ll_mobile" />
 
         <View
-            android:id="@+id/viewShadow"
+            android:id="@+id/divider"
             android:layout_width="0dp"
-            android:layout_height="8dp"
-            android:layout_marginTop="5dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/bg_shadow_soft"
             app:layout_constraintEnd_toEndOf="@+id/next"
             app:layout_constraintStart_toStartOf="@+id/next"
             app:layout_constraintTop_toBottomOf="@+id/next" />
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/viewShadow"
-            app:layout_constraintEnd_toEndOf="@+id/viewShadow"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/viewShadow" />
-
         <LinearLayout
             android:id="@+id/ll_social"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:orientation="horizontal"
+            android:layout_marginTop="12dp"
             app:layout_constraintLeft_toLeftOf="@+id/next"
             app:layout_constraintRight_toRightOf="@+id/next"
             app:layout_constraintTop_toBottomOf="@+id/divider">
