@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "16103938444",
+    "firebase_url": "https://cartravelsnew.firebaseio.com",
+    "project_id": "cartravelsnew",
+    "storage_bucket": "cartravelsnew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16103938444:android:881366292c9b957e17dea9",
+        "android_client_info": {
+          "package_name": "com.cartravels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16103938444-cn11mgl83iulldm6jaqjr2dj48ocr7f1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cartravels",
+            "certificate_hash": "96414c4fa64231c869ff4e03c90ae9c48e959075"
+          }
+        },
+        {
+          "client_id": "16103938444-ciae9vru3qhoel0jnlmoj7i33dcv51ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe8GC500KfWJxQxV0AowSH5-bb2HvHEDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16103938444-ciae9vru3qhoel0jnlmoj7i33dcv51ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16103938444:android:6d3535d6370f261d17dea9",
+        "android_client_info": {
+          "package_name": "com.cartravels_new"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16103938444-mr77nm0fmafkk3rqpp6aidqecc9g0sol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cartravels_new",
+            "certificate_hash": "96414c4fa64231c869ff4e03c90ae9c48e959075"
+          }
+        },
+        {
+          "client_id": "16103938444-thh106ut49u18lckhd760h50dbitmbab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cartravels_new",
+            "certificate_hash": "df56114d5f3c69e15bf1c01d0883a5b47bb3a81a"
+          }
+        },
+        {
+          "client_id": "16103938444-ciae9vru3qhoel0jnlmoj7i33dcv51ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe8GC500KfWJxQxV0AowSH5-bb2HvHEDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16103938444-ciae9vru3qhoel0jnlmoj7i33dcv51ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
