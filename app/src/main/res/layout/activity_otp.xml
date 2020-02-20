@@ -1,155 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".screens.activities.OtpActivity">
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/ic_logo" />
-
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/be_a_part_of_the_largest_indian_travel_community"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="center"
-        android:text="@string/login_sign_up_using"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-        android:textColor="@color/material_gray_700"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ll_email"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:hint="@string/email"
-        app:endIconMode="clear_text"
-        app:hintAnimationEnabled="true"
-        app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@id/type">
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".screens.activities.OtpActivity">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/be_a_part_of_the_largest_indian_travel_community"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="@string/login_sign_up_using"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@color/material_gray_700"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ll_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:padding="15dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="20dp"
+            android:hint="@string/email"
+            app:endIconMode="clear_text"
+            app:hintAnimationEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/type">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ll_mobile"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:hint="@string/mobile"
-        app:endIconMode="clear_text"
-        app:hintAnimationEnabled="true"
-        app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/ll_email"
-        app:layout_constraintStart_toStartOf="@+id/ll_email"
-        app:layout_constraintTop_toBottomOf="@id/ll_email">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ll_mobile"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number|numberSigned"
-            android:padding="15dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="25dp"
+            android:hint="@string/mobile"
+            app:endIconMode="clear_text"
+            app:hintAnimationEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintEnd_toEndOf="@+id/ll_email"
+            app:layout_constraintStart_toStartOf="@+id/ll_email"
+            app:layout_constraintTop_toBottomOf="@id/ll_email">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/next"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="25dp"
-        android:elevation="3dp"
-        android:gravity="center"
-        android:text="@string/next"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/ll_mobile"
-        app:layout_constraintStart_toStartOf="@+id/ll_mobile"
-        app:layout_constraintTop_toBottomOf="@id/ll_mobile" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextMobNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberSigned"
+                android:padding="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_social"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="@+id/next"
-        app:layout_constraintRight_toRightOf="@+id/next"
-        app:layout_constraintTop_toBottomOf="@+id/next">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/login_btn_facebook"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="15dp"
-            android:layout_weight="1"
-            android:background="@drawable/edit_bg"
-            android:drawableStart="@drawable/ic_facebook"
-            android:drawablePadding="10dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
             android:elevation="3dp"
-            android:padding="5dp"
-            android:text="Facebook"
-            android:textAllCaps="false" />
+            android:gravity="center"
+            android:text="@string/next"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/ll_mobile"
+            app:layout_constraintStart_toStartOf="@+id/ll_mobile"
+            app:layout_constraintTop_toBottomOf="@id/ll_mobile" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/login_btn_google"
+        <View
+            android:id="@+id/viewShadow"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="15dp"
-            android:layout_weight="1"
-            android:background="@drawable/edit_bg"
-            android:drawableStart="@drawable/ic_google"
-            android:drawablePadding="10dp"
-            android:elevation="3dp"
-            android:padding="5dp"
-            android:text="@string/google"
-            android:textAllCaps="false" />
-    </LinearLayout>
+            android:layout_height="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_shadow_soft"
+            app:layout_constraintEnd_toEndOf="@+id/next"
+            app:layout_constraintStart_toStartOf="@+id/next"
+            app:layout_constraintTop_toBottomOf="@+id/next" />
 
-    <TextView
-        android:id="@+id/footer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/footer"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toTopOf="@+id/viewShadow"
+            app:layout_constraintEnd_toEndOf="@+id/viewShadow"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/viewShadow" />
+
+        <LinearLayout
+            android:id="@+id/ll_social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@+id/next"
+            app:layout_constraintRight_toRightOf="@+id/next"
+            app:layout_constraintTop_toBottomOf="@+id/divider">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login_btn_facebook"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_bg"
+                android:drawableStart="@drawable/ic_facebook"
+                android:drawablePadding="10dp"
+                android:elevation="3dp"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:text="@string/facebook"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login_btn_google"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_bg"
+                android:drawableStart="@drawable/ic_google"
+                android:drawablePadding="10dp"
+                android:elevation="3dp"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:text="@string/google"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_social" />
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/footer"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/edit_bg"
+            android:drawableEnd="@drawable/flag_india"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/_91"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/ll_mobile"
+            app:layout_constraintStart_toStartOf="@+id/ll_mobile"
+            app:layout_constraintTop_toBottomOf="@+id/ll_email" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -18,5 +18,12 @@ class CarTravels : Application() {
         Timber.v(LogUtils.METHOD_ONLY)
         FacebookSdk.sdkInitialize(applicationContext)
         AppEventsLogger.activateApp(this)
+        instance = this
+    }
+
+
+    companion object {
+        var instance: CarTravels? = null
+            private set
     }
 }

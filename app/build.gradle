@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
-
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 29
 
@@ -18,6 +18,16 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 
@@ -45,7 +55,12 @@ dependencies {
     implementation 'com.facebook.android:facebook-android-sdk:4.31.0'
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
-
+    //otp
+    implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        // Exclude is only needed if you already have
+        // androidx.appcompat as a dependency in your app.
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
 }
 repositories {
     mavenCentral()
