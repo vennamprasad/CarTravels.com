@@ -69,15 +69,41 @@
     <string name="logo">logo</string>
     <string name="need_help_text">Need help? Visit the <annotation type="help_link">Help Center.</annotation></string>
     <string name="be_a_part_of_the_largest_indian_travel_community">Be a part of the largest Indian Travel Community</string>
-    <string name="email">Email</string><string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile</string>
     <string name="login_sign_up_using">Login/Sign up Using</string>
     <string name="next">Next</string>
     <string name="footer"><![CDATA[by continuing , i agree to Cartravels.com T&C]]></string>
     <string name="google">Sign Up with Google</string>
-    <string name="_91">+91</string><string name="facebook">Sign Up with Facebook</string>
+    <string name="_91">+91</string>
+    <string name="facebook">Sign Up with Facebook</string>
     <string name="no_internet">No internet !</string>
     <string name="no_internet_message">You are offline! Please connect to cellular or WiFi network.</string>
     <string name="we_have_sent_you_6_digit_otp_number_to_your_registed_mobile_number">we have sent you 6 digit otp
         number to your registed mobile number
-    </string><string name="normal_user">Normal User</string><string name="business_users">Business Users</string><string name="drivers">- Drivers</string><string name="travel_agenecy">- Travel Agenecy</string><string name="full_name">Full Name</string><string name="mail_domain_com">mail@domain.com</string><string name="mobile_number">Mobile Number</string>
+    </string>
+    <string name="normal_user">Normal User</string>
+    <string name="business_users">Business Users</string>
+    <string name="drivers">- Drivers</string>
+    <string name="travel_agenecy">- Travel Agenecy</string>
+    <string name="full_name">Full Name</string>
+    <string name="mail_domain_com">mail@domain.com</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="business_registration">Business Registration</string>
+    <string name="business_name">Business Name</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="alternate_number">Alternate Number</string>
+    <string name="city">City</string>
+    <string name="shop_address">Shop Address</string>
+    <string name="website_name">Website Name</string>
+    <string name="facebook_id">Facebook ID</string>
+    <string name="submit">Submit</string>
+    <string name="create_page_like">Create Page like</string>
+    <string name="add_key_words">Add Key words</string>
+    <string name="user_registration">User Registration</string>
+    <string name="name">Name</string>
+    <string name="profession">Profession</string>
+    <string name="address">Address</string>
 </resources>

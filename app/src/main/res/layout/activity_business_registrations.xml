@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.activities.RegistrationActivity">
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start|center"
+        android:padding="15dp"
+        android:text="@string/business_registration"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+    <ScrollView
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/submit_business"
+        android:layout_below="@id/type"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/business_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:gravity="center|start"
+                android:hint="@string/business_name"
+                android:inputType="textPersonName"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/owner_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:gravity="center|start"
+                android:hint="@string/owner_name"
+                android:inputType="textPersonName"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:gravity="center|start"
+                android:hint="@string/mail_domain_com"
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:gravity="center|start"
+                android:hint="@string/mobile_number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/alternate_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:gravity="center|start"
+                android:hint="@string/alternate_number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:gravity="center|start"
+                android:hint="@string/city"
+                android:inputType="textPostalAddress"
+                android:maxLength="10"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/shop_address"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:hint="@string/shop_address"
+                android:inputType="textPostalAddress"
+                android:lines="3"
+                android:maxLength="10"
+                android:maxLines="3"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/website_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:hint="@string/website_name"
+                android:inputType="textAutoComplete|text"
+                android:lines="3"
+                android:maxLength="10"
+                android:maxLines="3"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/facebook_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:hint="@string/facebook_id"
+                android:inputType="textAutoComplete|text"
+                android:lines="3"
+                android:maxLength="10"
+                android:maxLines="3"
+                android:padding="15dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/create_page_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:hint="@string/create_page_like"
+                android:inputType="textPostalAddress"
+                android:lines="3"
+                android:maxLength="10"
+                android:maxLines="3"
+                android:padding="15dp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add_key_words"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:hint="@string/add_key_words"
+                android:inputType="textPostalAddress"
+                android:lines="3"
+                android:maxLength="10"
+                android:maxLines="3"
+                android:padding="15dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_business"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="3dp"
+        android:layout_marginBottom="-8dp"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>

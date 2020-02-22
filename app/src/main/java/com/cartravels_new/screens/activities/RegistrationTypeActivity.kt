@@ -12,10 +12,10 @@ class RegistrationTypeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration_type)
         normal.setOnClickListener {
-            startActivity(Intent(this, RegistrationActivity::class.java))
+            startActivity(Intent(this, UserRegistrationActivity::class.java))
         }
         business.setOnClickListener {
-            startActivity(Intent(this, RegistrationActivity::class.java))
+            startActivity(Intent(this, BusinessRegistrationsActivity::class.java))
         }
     }
 }
