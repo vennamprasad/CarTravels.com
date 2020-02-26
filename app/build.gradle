@@ -46,6 +46,12 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
 
+    //capture_image
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+
+    //runtime permissions
+    implementation 'com.karumi:dexter:4.2.0'
+
     // Logging
     implementation 'com.jakewharton.timber:timber:4.7.1'
     //kotlin
@@ -61,6 +67,7 @@ dependencies {
         // androidx.appcompat as a dependency in your app.
         exclude group: 'androidx.appcompat', module: 'appcompat'
     }
+
 }
 repositories {
     mavenCentral()
