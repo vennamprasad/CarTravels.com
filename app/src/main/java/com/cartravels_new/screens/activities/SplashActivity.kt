@@ -12,13 +12,13 @@ import com.cartravels_new.R
  */
 class SplashActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-        Handler().postDelayed({
-            startActivity(Intent(this, OtpActivity::class.java))
-            finish()
-        }, 300)
-    }
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setContentView(R.layout.activity_splash)
+		Handler().postDelayed({
+			startActivity(Intent(this, OtpActivity::class.java))
+			finish()
+		}, 300)
+	}
 
 }

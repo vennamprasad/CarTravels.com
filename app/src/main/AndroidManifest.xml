@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cartravels_new">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -20,6 +21,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".CarTravels"
         android:allowBackup="true"
@@ -29,15 +31,16 @@
         android:theme="@style/AppTheme.Red"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ForgotPassword"></activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".screens.activities.ForgotPassword" />
+        <activity android:name=".screens.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CategorieSelectionActivity" />
-        <activity android:name=".ChipViewActivity" />
+        <activity android:name=".screens.activities.UserRegistrationActivity" />
+        <activity android:name=".screens.activities.CategoriesSelectionActivity" />
+        <activity android:name=".screens.activities.ChipViewActivity" />
         <activity android:name=".screens.activities.ImageCaptureActivity" />
         <activity android:name=".screens.activities.RegistrationActivity" />
         <activity
@@ -46,11 +49,12 @@
         <activity
             android:name=".screens.activities.OtpActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".screens.activities.SplashActivity" />
+        <activity android:name=".screens.activities.LoginActivity" />
         <activity android:name=".screens.activities.BusinessRegistrationsActivity" />
         <activity
             android:name=".screens.activities.ThemeDemoActivity"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
@@ -58,6 +62,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"
             tools:replace="android:value" />
+
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -67,14 +72,19 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".LoginActivity" />
+
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"

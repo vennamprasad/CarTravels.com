@@ -16,7 +16,6 @@
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
 
     <ScrollView
-        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/submit_user"
@@ -31,27 +30,77 @@
             android:orientation="vertical"
             tools:ignore="UselessParent">
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/owner_name"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/edit_bg"
-                android:gravity="center|start"
-                android:hint="@string/name"
-                android:inputType="textPersonName"
-                android:padding="15dp" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/profession"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg"
+                    android:gravity="center|start"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/surname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg"
+                    android:gravity="center|start"
+                    android:hint="@string/surname"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/edit_bg"
-                android:gravity="center|start"
-                android:hint="@string/profession"
-                android:inputType="textPersonName"
-                android:padding="15dp" />
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg"
+                    android:gravity="center|start"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="15dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/alternate_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg"
+                    android:gravity="center|start"
+                    android:hint="@string/alternate_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="15dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/email"
@@ -62,58 +111,106 @@
                 android:gravity="center|start"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/mobile"
+                android:id="@+id/profession"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/edit_bg"
                 android:gravity="center|start"
-                android:hint="@string/mobile_number"
-                android:inputType="number"
-                android:maxLength="10"
-                android:padding="15dp" />
+                android:hint="@string/profession"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/alternate_number"
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/edit_bg"
-                android:gravity="center|start"
-                android:hint="@string/alternate_number"
-                android:inputType="number"
-                android:maxLength="10"
-                android:padding="15dp" />
+                android:gravity="start|center"
+                android:text="@string/state"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:gravity="start|center"
+                android:text="@string/district"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:gravity="start|center"
+                android:text="@string/city"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/city"
                 android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/street"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/edit_bg"
                 android:gravity="center|start"
-                android:hint="@string/city"
+                android:hint="@string/street"
                 android:inputType="textPostalAddress"
-                android:maxLength="10"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/shop_address"
+                android:id="@+id/door_number"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/edit_bg"
-                android:ellipsize="end"
                 android:gravity="center|start"
-                android:hint="@string/address"
+                android:hint="@string/door_number"
                 android:inputType="textPostalAddress"
-                android:lines="3"
-                android:maxLength="10"
-                android:maxLines="3"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/pin_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_bg"
+                android:gravity="center|start"
+                android:hint="@string/pin_code"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -121,8 +218,8 @@
         android:id="@+id/submit_user"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="-8dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-8dp"
         android:elevation="3dp"
         android:gravity="center"
         android:text="@string/submit"

@@ -1,4 +1,4 @@
-package com.cartravels_new
+package com.cartravels_new.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.cartravels_new.models.ChipModel
+import com.cartravels_new.listners.ItemClickListener
+import com.cartravels_new.R
 
 class ChipAdapter() : RecyclerView.Adapter<ChipAdapter.ViewHolder>() {
 
@@ -23,13 +26,13 @@ class ChipAdapter() : RecyclerView.Adapter<ChipAdapter.ViewHolder>() {
     }
 
     //this method is returning the view for each item in the list
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChipAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.item_layouts, parent, false)
         return ViewHolder(v)
     }
 
     //this method is binding the data on the list
-    override fun onBindViewHolder(holder: ChipAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(userlist!![position], itemClickListener, userlist!!)
     }
 

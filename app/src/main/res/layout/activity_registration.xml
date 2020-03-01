@@ -96,18 +96,19 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/edit_bg"
                     android:gravity="center|start"
-                    android:hint="Password"
+                    android:hint="@string/password"
                     android:maxLength="10"
+                    android:inputType="textPassword"
                     android:padding="15dp" />
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/rg_confirmpassword"
+                    android:id="@+id/confirm_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/edit_bg"
                     android:gravity="center|start"
-                    android:hint="Confirm Password"
+                    android:hint="@string/confirm_password"
                     android:maxLength="10"
                     android:padding="15dp" />
 

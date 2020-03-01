@@ -1,4 +1,4 @@
-package com.cartravels_new
+package com.cartravels_new.screens.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,9 +6,12 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.cartravels_new.models.ChipModel
+import com.cartravels_new.listners.ItemClickListener
+import com.cartravels_new.R
+import com.cartravels_new.adapters.ChipAdapter
 import com.google.android.material.chip.Chip
 import kotlinx.android.synthetic.main.activity_chip_view.*
 
