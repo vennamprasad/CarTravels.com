@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.PorterDuff
 import android.os.Build
+import android.text.TextUtils
 import android.util.Patterns
 import android.view.View
 import android.view.WindowManager
@@ -92,5 +93,16 @@ object Tools {
 	fun setSnackBarBgColor(ctx:Context,snackbar:Snackbar,color:Int) {
 		val sbView=snackbar.view
 		sbView.setBackgroundColor(ctx.resources.getColor(color))
+	}
+
+	fun isValidEmail(target: CharSequence): Boolean {
+		return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches()
+	}
+	private fun isValidPhoneNumber(phone: String): Boolean {
+
+		return if (phone.trim { it <= ' ' } != "" && phone.length > 10) {
+			Patterns.PHONE.matcher(phone).matches()
+		} else false
+
 	}
 }

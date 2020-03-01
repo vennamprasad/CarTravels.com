@@ -6,10 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.cartravels_new.screens.activities.RegistrationTypeActivity
+import com.cartravels_new.utils.Tools
 import kotlinx.android.synthetic.main.activity_forgot_password.*
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.email
-import kotlinx.android.synthetic.main.activity_login.password
 import kotlinx.android.synthetic.main.activity_registration.*
 import okhttp3.ResponseBody
 import org.json.JSONObject
@@ -18,7 +17,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.lang.Exception
 
-class ForgotPassword : AppCompatActivity() {
+class ForgotPassword : AppCompatActivity(), View.OnClickListener {
+
 
     private lateinit var success: String
     private lateinit var errorres: String
@@ -32,9 +32,32 @@ class ForgotPassword : AppCompatActivity() {
 
         try {
 
-            forgot_password_click.setOnClickListener {
+            forgot_password_click.setOnClickListener(this)
+            reset_password_click.setOnClickListener(this)
+            chnage_password_click.setOnClickListener(this)
 
-                RetrofitClient.instance.forgotPassword(email.text.toString())
+        } catch (e: Exception) {
+            e.message
+        }
+    }
+
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            R.id.forgot_password_click -> {
+                val email = forgot_email.text.toString().trim()
+
+                if (email.isEmpty()) {
+                    forgot_email.error = "Email required"
+                    forgot_email.requestFocus()
+                    return
+                }
+                if (!Tools.isValidEmail(email)) {
+                    forgot_email.error = "valid Email required"
+                    forgot_email.requestFocus()
+                    return
+                }
+
+                RetrofitClient.instance.forgotPassword(email)
                         .enqueue(object : Callback<ResponseBody> {
                             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                                 Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
@@ -61,8 +84,18 @@ class ForgotPassword : AppCompatActivity() {
 
                         })
             }
-
-            reset_password_click.setOnClickListener {
+            R.id.reset_password_click -> {
+                val otp = email_otp.text.toString().trim()
+                if (otp.isEmpty()) {
+                    email_otp.error = "OTP Number required"
+                    email_otp.requestFocus()
+                    return
+                }
+                if (otp.length != 6) {
+                    email_otp.error = "OTP Number must be 6 digits "
+                    email_otp.requestFocus()
+                    return
+                }
                 RetrofitClient.instance.resetPassword(uniid, email_otp.text.toString())
                         .enqueue(object : Callback<ResponseBody> {
                             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
@@ -85,9 +118,36 @@ class ForgotPassword : AppCompatActivity() {
 
                         })
             }
+            R.id.chnage_password_click -> {
+                val newpassword = new_password.text.toString().trim()
+                val confrompassword = confirm_password.text.toString().trim()
+                if (newpassword.isEmpty()) {
+                    new_password.error = "Password required"
+                    new_password.requestFocus()
+                    return
+                }
+                if (newpassword.length < 8) {
+                    new_password.error = "Password length must be greater than 8 characters"
+                    new_password.requestFocus()
+                    return
+                }
 
+                if (confrompassword.isEmpty()) {
+                    confirm_password.error = "Confirm Password required"
+                    confirm_password.requestFocus()
+                    return
+                }
+                if (confrompassword.length < 8) {
+                    confirm_password.error = "Confirm Password length must be greater than 8 characters"
+                    confirm_password.requestFocus()
+                    return
+                }
+                if (!newpassword.equals(confrompassword)) {
+                    confirm_password.error = "Password & Confirm Password must be same "
+                    confirm_password.requestFocus()
+                    return
+                }
 
-            chnage_password_click.setOnClickListener {
                 RetrofitClient.instance.changePassword(uniid, email_otp.text.toString(), new_password.text.toString(), confirm_password.text.toString())
                         .enqueue(object : Callback<ResponseBody> {
                             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
@@ -109,9 +169,7 @@ class ForgotPassword : AppCompatActivity() {
 
                         })
             }
-
-        } catch (e: Exception) {
-            e.message
         }
+
     }
 }
