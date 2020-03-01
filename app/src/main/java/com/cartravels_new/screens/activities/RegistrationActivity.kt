@@ -122,7 +122,6 @@ class RegistrationActivity : AppCompatActivity(), View.OnClickListener {
 									startActivity(intent)
 								}
 							}
-
 						})
 			}
 		}

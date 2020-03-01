@@ -120,4 +120,7 @@
     <string name="door_number">Door Number</string>
     <string name="or">------ or ------</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="right">right</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

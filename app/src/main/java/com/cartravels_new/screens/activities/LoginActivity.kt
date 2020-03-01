@@ -85,17 +85,20 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 					}
 
 					override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-						val jsonObject = JSONObject(response.body()?.string())
+						val jsonObject = JSONObject(response.body()!!.string())
 						errorres = jsonObject.optString("error")
 						message = jsonObject.optString("message")
-						if (errorres.equals("true")) {
-							//Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
-						} else {
-							Toast.makeText(applicationContext, "Login Successfully", Toast.LENGTH_LONG).show()
-							val intent = Intent(this@LoginActivity, RegistrationTypeActivity::class.java)
-							startActivity(intent)
-							login_email.setText("")
-							login_password.setText("")
+						when {
+							errorres.equals("true") -> {
+								//Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
+							}
+							else -> {
+								Toast.makeText(applicationContext, "Login Successfully", Toast.LENGTH_LONG).show()
+								val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+								startActivity(intent)
+								login_email.setText("")
+								login_password.setText("")
+							}
 						}
 					}
 
