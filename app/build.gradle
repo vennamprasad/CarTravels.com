@@ -61,6 +61,10 @@ dependencies {
     implementation 'com.facebook.android:facebook-android-sdk:4.31.0'
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
     //otp
     implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
         // Exclude is only needed if you already have

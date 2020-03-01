@@ -27,13 +27,17 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme.Red"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ChipViewActivity">
+        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CategorieSelectionActivity" />
+        <activity android:name=".ChipViewActivity" />
         <activity android:name=".screens.activities.ImageCaptureActivity" />
         <activity android:name=".screens.activities.RegistrationActivity" />
         <activity
@@ -42,12 +46,8 @@
         <activity
             android:name=".screens.activities.OtpActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".screens.activities.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".screens.activities.SplashActivity" />
+        <activity android:name=".screens.activities.BusinessRegistrationsActivity" />
         <activity
             android:name=".screens.activities.ThemeDemoActivity"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />

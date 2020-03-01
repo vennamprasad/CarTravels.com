@@ -21,7 +21,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.167"
+            app:layout_constraintVertical_bias="0.165"
             app:srcCompat="@drawable/ic_logo" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:text="@string/sign_up"
+            android:text="@string/sign_in"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             android:textColor="@color/material_gray_700"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -56,38 +56,16 @@
                 tools:ignore="UselessParent">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_bg"
-                    android:gravity="center|start"
-                    android:hint="@string/full_name"
-                    android:inputType="textPersonName"
-                    android:padding="15dp" />
-
-                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:background="@drawable/edit_bg"
                     android:gravity="center|start"
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:padding="15dp" />
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/mobile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_bg"
-                    android:gravity="center|start"
-                    android:hint="@string/mobile_number"
-                    android:inputType="number"
-                    android:maxLength="10"
-                    android:padding="15dp" />
+
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/password"
@@ -100,16 +78,7 @@
                     android:maxLength="10"
                     android:padding="15dp" />
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/confirmpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_bg"
-                    android:gravity="center|start"
-                    android:hint="Confirm Password"
-                    android:maxLength="10"
-                    android:padding="15dp" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -117,13 +86,13 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/next"
+                        android:id="@+id/sign_in"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="25dp"
                         android:elevation="3dp"
                         android:gravity="center"
-                        android:text="@string/sign_up"
+                        android:text="@string/sign_in"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textStyle="bold" />
@@ -135,12 +104,28 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/login"
+                        android:id="@+id/sign_up"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:elevation="3dp"
                         android:gravity="center"
-                        android:text="@string/sign_in"
+                        android:text="@string/sign_up"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/forgot_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:elevation="3dp"
+                        android:gravity="center"
+                        android:text="Forgot Password?"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textStyle="bold" />

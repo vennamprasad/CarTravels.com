@@ -1,34 +1,32 @@
-package com.cartravels_new.screens.activities
+package com.cartravels_new
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import com.cartravels_new.LoginActivity
-import com.cartravels_new.R
-import com.cartravels_new.RetrofitClient
+import com.cartravels_new.screens.activities.RegistrationActivity
+import com.cartravels_new.screens.activities.RegistrationTypeActivity
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_registration.*
+import kotlinx.android.synthetic.main.activity_registration.email
+import kotlinx.android.synthetic.main.activity_registration.password
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RegistrationActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var message: String
     private lateinit var errorres: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registration)
+        setContentView(R.layout.activity_login)
 
-        next.setOnClickListener {
-            //            val intent = Intent(RegistrationActivity@ this, ImageCaptureActivity::class.java)
-//            startActivity(intent)
-
-
-            RetrofitClient.instance.createUser(name.text.toString(), email.text.toString(), mobile.text.toString(), password.text.toString(), confirmpassword.text.toString())
+        sign_in.setOnClickListener {
+            RetrofitClient.instance.loginUser(email.text.toString(), password.text.toString())
                     .enqueue(object : Callback<ResponseBody> {
                         override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                             Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
@@ -41,17 +39,25 @@ class RegistrationActivity : AppCompatActivity() {
                             if (errorres.equals("true")) {
                                 Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
                             } else {
-                                Toast.makeText(applicationContext, "Registration Successfully", Toast.LENGTH_LONG).show()
-                                val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
+                                Toast.makeText(applicationContext, "Login Successfully", Toast.LENGTH_LONG).show()
+                                val intent = Intent(this@LoginActivity, RegistrationTypeActivity::class.java)
                                 startActivity(intent)
+                                email.setText("")
+                                password.setText("")
                             }
                         }
 
                     })
+
         }
 
-        login.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+        sign_up.setOnClickListener {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)
+        }
+
+        forgot_password.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
             startActivity(intent)
         }
     }

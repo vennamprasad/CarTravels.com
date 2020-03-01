@@ -1,19 +1,15 @@
-<!-- @formatter:off -->
 <resources>
     <!-- App -->
     <string name="app_name">CarTravels.com</string>
     <string name="facebook_app_id">239830083699823</string>
     <string name="fb_login_protocol_scheme">fb239830083699823</string>
-
     <!-- Home -->
     <string name="home_tab_xml">XML</string>
     <string name="home_tab_code">Code</string>
-
     <!-- Set Theme Dialog -->
     <string name="set_theme_dialog_title">Set Theme</string>
     <string name="set_theme_dialog_button_positive">Set Theme</string>
     <string name="set_theme_dialog_button_negative">Cancel</string>
-
     <!-- Material Theme Elements -->
     <string name="material_theme_red">Red</string>
     <string name="material_theme_orange">Orange</string>
@@ -45,14 +41,12 @@
     <string name="material_theme_dialogs">Dialogs</string>
     <string name="material_theme_dialog_button_positive">Positive</string>
     <string name="material_theme_dialog_button_negative">Negative</string>
-
     <!-- Spinners -->
     <string name="spinner_item_1">One</string>
     <string name="spinner_item_2">Two</string>
     <string name="spinner_item_3">Three</string>
     <string name="spinner_item_4">Four</string>
     <string name="spinner_item_5">Five</string>
-
     <string-array name="spinner_items_array">
         <item>@string/spinner_item_1</item>
         <item>@string/spinner_item_2</item>
@@ -60,7 +54,6 @@
         <item>@string/spinner_item_4</item>
         <item>@string/spinner_item_5</item>
     </string-array>
-
     <!-- Snackbars -->
     <string name="snackbar_action">Action</string>
     <string name="title_activity_splash">SplashActivity</string>
@@ -69,24 +62,52 @@
     <string name="logo">logo</string>
     <string name="need_help_text">Need help? Visit the <annotation type="help_link">Help Center.</annotation></string>
     <string name="be_a_part_of_the_largest_indian_travel_community">Be a part of the largest Indian Travel Community</string>
-    <string name="email">Email</string><string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile</string>
     <string name="login_sign_up_using">Login/Sign up Using</string>
     <string name="next">Next</string>
     <string name="footer"><![CDATA[by continuing , i agree to Cartravels.com T&C]]></string>
     <string name="google">Sign Up with Google</string>
-    <string name="_91">+91</string><string name="facebook">Sign Up with Facebook</string>
+    <string name="_91">+91</string>
+    <string name="facebook">Sign Up with Facebook</string>
     <string name="no_internet">No internet !</string>
     <string name="no_internet_message">You are offline! Please connect to cellular or WiFi network.</string>
     <string name="we_have_sent_you_6_digit_otp_number_to_your_registed_mobile_number">we have sent you 6 digit otp
         number to your registed mobile number
-    </string><string name="normal_user">Normal User</string><string name="business_users">Business Users</string><string name="drivers">- Drivers</string><string name="travel_agenecy">- Travel Agenecy</string><string name="full_name">Full Name</string><string name="mail_domain_com">mail@domain.com</string><string name="mobile_number">Mobile Number</string>
-    
-    <string-array name="types">
-        <item>car 1</item>
-        <item>car 2</item>
-        <item>car 3</item>
-        <item>car 4</item>
-        <item>car 5</item>
-        <item>car 6</item>
-    </string-array>
+    </string>
+    <string name="normal_user">Normal User</string>
+    <string name="business_users">Business Users</string>
+    <string name="drivers">- Drivers</string>
+    <string name="travel_agenecy">- Travel Agenecy</string>
+    <string name="full_name">Full Name</string>
+    <string name="mail_domain_com">mail@domain.com</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="business_registration">Business Registration</string>
+    <string name="business_name">Business Name</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="alternate_number">Alternate Number</string>
+    <string name="city">City</string>
+    <string name="shop_address">Shop Address</string>
+    <string name="website_name">Website Name</string>
+    <string name="facebook_id">Facebook ID</string>
+    <string name="submit">Submit</string>
+    <string name="create_page_like">Create Page like</string>
+    <string name="add_key_words">Add Key words</string>
+    <string name="user_registration">User Registration</string>
+    <string name="name">Name</string>
+    <string name="profession">Profession</string>
+    <string name="address">Address</string>
+    <string name="select_your_business_category">Select Your Business Category</string>
+    <string name="car_travels_offices">Car Travels Offices</string>
+    <string name="owner_cum_drivers">Owner Cum Drivers</string>
+    <string name="drivers_cat">Drivers</string>
+    <string name="self_driving_offices">Self Driving Offices</string>
+    <string name="opting_drivers">Opting Drivers</string>
+    <string name="tenders">Tenders</string>
+    <string name="tours_amp_travels"><![CDATA[Tours & Travels]]></string>
+    <string name="mechanics">Mechanics</string>
+    <string name="hotels_amp_resorts"><![CDATA[Hotels & Resorts]]></string>
+    <string name="ads">Ads</string>
 </resources>
